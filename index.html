@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Game Creator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+  <section class="section" id="form">
+    <div class="container">
+        <h1 class="title has-text-centered pb-6">Organize a video-game idea</h1>
+        <form action="javascript:void(0);">
+            <label for="name"><h2 class="is-size-4 mb-2 mt-5">Video-game name:</h2></label>
+            <input id="name" name="name" class="input is-info" type="text" placeholder="name">
+
+            <label for="language"><h2 class="is-size-4 mb-2 mt-5">Programming Language(s):</h2></label>
+            <input id="language" name="language" class="input is-info" type="text" placeholder="Ex. C#, C++, JavaScript">
+
+            <label for="tools"><h2 class="is-size-4 mb-2 mt-5">Tools:</h2></label>
+            <input id="tools" name="tools" class="input is-info" type="text" placeholder="Ex. Unity, Vscode, ...">
+
+            <label for="style"><h2 class="is-size-4 mb-2 mt-5">Style</h2></label>
+            <div class="select is-link mt-2 mb-2">
+                <select id="style" name="style">
+                  <option value="" disabled selected>Select your option</option>
+                  <option>Sandbox</option>
+                  <option>Real-time strategy (RTS)</option>
+                  <option>Shooters (FPS and TPS)</option>
+                  <option>Multiplayer online battle arena (MOBA)</option>
+                  <option>Role-playing (RPG, ARPG, and More)</option>
+                  <option>Simulation and sports</option>
+                  <option>Puzzlers and party games</option>
+                  <option>Action-adventure</option>
+                  <option>Survival and horror</option>
+                  <option>Platformer</option>
+                  <option>Mobile</option>
+                  <option>Browser</option>
+                  <option>Other</option>
+                </select>
+            </div>
+
+            <label for="type"><h2 class="is-size-4 mb-2 mt-5">Type:</h2></label>
+            <div class="select is-link mt-2 mb-6">
+                <select id="type" name="type">
+                  <option value="" disabled selected>Select your option</option>
+                  <option>2D</option>
+                  <option>3D</option>
+                </select>
+            </div>
+            
+            <label for="description"><h2 class="is-size-4 mb-2 mt-3">Description:</h2></label>
+            <textarea id="description" name="description" class="textarea is-info" placeholder="Tip: add what your game can do, the inputs it takes, the main story line, how it starts, etc..."></textarea>
+            <div id="colors">
+                <label for="color"><h2 class="is-size-4 mb-2 mt-5">Display Color:</h2></label>
+                <div class="is-link mt-2 mb-6">
+                    <div>
+                        <input type="color" id="color" name="color" value="#485fc7">
+                    </div>
+                    <label for="color2"><h2 class="is-size-4 mb-2 mt-5">Text Color:</h2></label>
+                    <div>
+                        <input type="color" id="color2" name="color2" value="#ffffff">
+                    </div>
+                </div>         
+            </div>
+
+
+            <input id="submit" class="button is-success mt-4" type="submit" value="Create game idea">
+
+        </form>
+    </div>
+  </section>
+  <section class="section" id="result" style="display: none;">
+    <div class="container">
+        <div class="notification" id="bg">
+            <strong><h1 class="is-size-2 has-text-centered" id="videogame-name"></h1></strong>
+            <h2 class="is-size-4 mb-2 mt-5"><strong>Programming Languages:</strong><span class="pl-5" id="programming-language"></span> </h2>
+            <h2 class="is-size-4 mb-2 mt-5"><strong>Tools: </strong><span class="pl-5" id="tools-game">Unity</span></h2>
+            <h2 class="is-size-4 mb-2 mt-5"><strong>Style: </strong><span class="pl-5" id="style-game">Battle Royale</span></h2>
+            <h2 class="is-size-4 mb-2 mt-5"><strong>Type: </strong><span class="pl-5" id="type-game">2D</span></h2>
+            <h2 class="is-size-4 mb-2 mt-5"><strong>Description</strong></h2>
+            <h2 class="is-size-4 mb-2 mt-5" id="description-game" style="text-indent: 50px;"></h2>
+          </div>
+    </div>
+  </section>
+  <p class="pl-2">made with <a href="https://bulma.io/" target="_blank">Bulma</a></p>
+  </body>
+</html>

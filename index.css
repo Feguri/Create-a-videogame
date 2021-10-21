@@ -1,0 +1,19 @@
+html {
+    background-color: #f2f2f2;
+}
+
+option:after {
+    content: " ";
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+option.red:after { background: #c00; }
+option.green:after { background: #0c0; }
+option.blue:after { background: #00c; }
+
+#bg {
+    color: white;
+}
